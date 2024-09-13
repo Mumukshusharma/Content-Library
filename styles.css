@@ -1,0 +1,261 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Font */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9; /* Light, neutral background */
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation Styles */
+header {
+  background: linear-gradient(135deg, #d9f2f8, #1086cf); /* Soft gradient */
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  position: relative;
+  padding: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #47b8ec, #81d4fa);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #0015ff;
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #d0ecf0, #b2ebf2); /* Soft gradient */
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4fc3f7, #b2ebf2); /* Gradient title */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #83e1ed, #07eaff); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hero button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #4fc3f7, #81d4fa); /* Gradient button */
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero button:hover {
+  background: linear-gradient(135deg, #81d4fa, #4fc3f7); /* Hover effect */
+  transform: scale(1.05);
+}
+
+/* Content Library */
+.content-library {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f4f4f9, #e0e0e0); /* Light gray gradient */
+  text-align: center;
+}
+
+.content-library h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #4fc3f7, #81d4fa); /* Gradient heading */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(135deg, #ffffff, #f4f4f9); /* Light gradient card background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #4fc3f7, #81d4fa); /* Gradient for card titles */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #b2ebf2, #e0f7fa); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card button {
+  background: linear-gradient(135deg, #4fc3f7, #81d4fa); /* Gradient button on cards */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card button:hover {
+  background: linear-gradient(135deg, #81d4fa, #4fc3f7); /* Hover effect */
+  transform: scale(1.05);
+}
+
+/* About Section */
+#about {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Light gradient */
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #4fc3f7, #81d4fa); /* Gradient heading */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#about p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f4f4f9, #ffffff); /* Light gradient */
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #4fc3f7, #81d4fa); /* Gradient heading */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+#contact label {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #4fc3f7;
+  box-shadow: 0 0 8px rgba(79, 195, 247, 0.3);
+  outline: none;
+}
+
+#contact button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #4fc3f7, #81d4fa); /* Gradient button */
+}

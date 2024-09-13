@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crunchyroll Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shows">Shows</a></li>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="login-register.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome to Anime World</h1>
+    <p>Stream the best anime and movies</p>
+    <button>Explore Now</button>
+  </section>
+
+  <!-- Content Section (Anime Shows) -->
+  <section id="shows" class="content-section">
+    <h2>Popular Anime Shows</h2>
+    <div class="content-grid" id="anime-shows">
+      <!-- Anime show cards will be loaded dynamically here -->
+    </div>
+  </section>
+
+  <!-- Content Section (Anime Movies) -->
+  <section id="movies" class="content-section">
+    <h2>Featured Anime Movies</h2>
+    <div class="content-grid" id="anime-movies">
+      <!-- Anime movie cards will be loaded dynamically here -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Anime Streaming Service</p>
+  </footer>
+
+  <script src="content-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

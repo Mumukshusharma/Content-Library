@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shows">Shows</a></li>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="login-register.html">Login/Register</a></li>
+        <!-- Logout Link -->
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Anime World</h1>
+      <p>Stream the best anime and movies from across the globe</p>
+      <button>Explore Now</button>
+      <!-- Welcome Message -->
+      <div id="welcome-message"></div>
+    </div>
+  </section>
+
+  <script>
+    // Display welcome message if user is logged in
+    document.addEventListener('DOMContentLoaded', function() {
+      const username = localStorage.getItem('username');
+      if (username) {
+        const welcomeMessage = document.getElementById('welcome-message');
+        if (welcomeMessage) {
+          welcomeMessage.textContent = `Welcome, ${username}! Enjoy the best of anime.`;
+        }
+      }
+      
+      // Handle Logout
+      document.getElementById('logout').addEventListener('click', function() {
+        localStorage.removeItem('username'); // Clear username from localStorage
+        window.location.href = 'login-register.html'; // Redirect to login page
+      });
+    });
+  </script>
+  
+
+  <!-- Content Section (Anime Shows) -->
+  <section id="shows" class="content-section">
+    <h2>Popular Anime Shows</h2>
+    <div class="content-grid" id="anime-shows"></div>
+  </section>
+
+  <!-- Content Section (Anime Movies) -->
+  <section id="movies" class="content-section">
+    <h2>Featured Anime Movies</h2>
+    <div class="content-grid" id="anime-movies"></div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <h2>About Us</h2>
+    <p>Welcome to Anime World, your go-to platform for all things anime! We are dedicated to providing anime lovers with a vast collection of top-tier anime series, movies, and OVA (original video animations) from across the globe. Whether you're into classic shows or the latest trending titles, Anime World has something for every fan.</p>
+    <h3>Our Mission</h3>
+    <p>Our mission is to foster a global anime community by offering a curated selection of the best anime content and creating a space where fans can explore and enjoy their favorite shows and movies. We aim to bridge the gap between anime creators and fans by making high-quality anime more accessible to audiences worldwide.</p>
+    <h3>Our History</h3>
+    <p>Anime World started as a small passion project between friends who loved anime and wanted to share it with others. Over the years, we grew from a humble fan site into a leading platform, offering thousands of anime titles. We take pride in our diverse library, which spans multiple genres, languages, and cultures.</p>
+    <h3>Our Community</h3>
+    <p>At Anime World, we believe that anime is more than just entertainment—it's a way to connect with people, share experiences, and dive into stories that reflect the complexities of life. We’re more than just a streaming platform—we’re a community of fans, creators, and artists who share a love for anime culture.</p>
+    <h3>Features We Offer</h3>
+    <ul>
+      <li>Exclusive access to a massive library of both classic and new anime titles.</li>
+      <li>Personalized recommendations based on your viewing history and preferences.</li>
+      <li>Interactive features, including watchlists, ratings, and fan reviews.</li>
+      <li>Subtitles in multiple languages for a global audience.</li>
+      <li>High-definition streaming with options for offline viewing.</li>
+    </ul>
+    <h3>What's Next?</h3>
+    <p>Looking ahead, we plan to introduce more interactive features to Anime World, such as live events, anime creator interviews, and fan forums. Our goal is to continue evolving with the community's needs, offering more original content, and building partnerships with anime studios to bring exclusive shows to our platform.</p>
+    <p>Thank you for being part of our journey! Whether you're a seasoned otaku or new to the world of anime, we hope you’ll enjoy everything Anime World has to offer.</p>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, suggestions, or just want to chat about anime, feel free to reach out to us using the form below.</p>
+    <form id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script src="content-data.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

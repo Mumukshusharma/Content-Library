@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Register | Content Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Registration/Login Form Section -->
+  <section id="registration-login">
+    <div class="form-container">
+      <div class="form-wrapper">
+        <!-- Register Form -->
+        <div class="form-card" id="register">
+          <h2>Register</h2>
+          <p class="form-description">New here? Create an account to start exploring our content library.</p>
+          <form id="register-form">
+            <label for="register-name">Name:</label>
+            <input type="text" id="register-name" name="name" required>
+            
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" name="email" required>
+            
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" name="password" required>
+            
+            <label for="register-confirm-password">Confirm Password:</label>
+            <input type="password" id="register-confirm-password" name="confirm-password" required>
+            
+            <button type="submit">Register</button>
+          </form>
+          <p class="form-link">Already have an account? <a href="login.html">Log in here</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Content Library. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

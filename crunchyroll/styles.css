@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f5af19, #f12711);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Authentication Container */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Toggle Button Styling */
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.toggle button {
+  width: 48%;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #f5af19;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle button.active {
+  background-color: #f12711;
+  color: white;
+}
+
+.toggle button:hover {
+  background-color: #333;
+  color: #f5af19;
+}
+
+/* Auth Form Styling */
+.auth-form {
+  display: none;
+}
+
+.auth-form.active {
+  display: block;
+}
+
+.auth-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #f5af19;
+}
+
+.auth-form label {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.auth-form input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-color: #f12711;
+  outline: none;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f12711;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #e55b00;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .auth-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .toggle button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .auth-form input, .auth-form button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
